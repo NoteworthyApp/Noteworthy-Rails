@@ -1,34 +1,75 @@
 <div class="row">
     <div class="col-sm-12 text-center sign-up">
-      <h1>Noteworthy</h1>
 
-      <hr>
-      <br>
+      <br><br>
 
       <div class="col-sm-6 col-sm-offset-3">
-        <div class="card">
+
+        <div id="sign-up-card" class="card" style="display: none">
           <div class="card-header">
             <h5>Create an Account</h5>
           </div>
+
           <div class="card-block">
-            <div class="input-group">
-              <span class="input-group-addon">Username</span>
-              <input id="username" type="text" class="form-control" placeholder="Username">
+
+            <div class="form-group has-feedback">
+
+              <div class="form-group">
+                <label class="control-label pull-left">Username</label>
+                <input id="username" type="text" class="form-control" placeholder="Username">
+              </div>
+
+
+              <div class="form-group">
+                <label class="control-label pull-left">Email</label>
+                <input id="email" type="text" class="form-control" placeholder="Email">
+              </div>
+
+              <div class="form-group">
+                <label class="control-label pull-left">Password</label>
+                <input id="password" type="password" class="form-control" placeholder="Password">
+              </div>
             </div>
-            <br>
-            <div class="input-group">
-              <span class="input-group-addon">Email</span>
-              <input id="email" type="text" class="form-control" placeholder="Email">
-            </div>
-            <br>
-            <div class="input-group">
-              <span class="input-group-addon">Password</span>
-              <input id="password" type="password" class="form-control" placeholder="Password">
-            </div>
-            <br>
-            <button id="signUp" type="button" class="btn btn-success">Sign Up</button>
+
+            <button id="signUp" type="button" class="btn btn-primary">Sign Up</button>
+
           </div>
         </div>
+
+        <div id="sign-in-card" class="card">
+          <div class="card-header card-primary card-inverse">
+            <h5 style="color: white">Sign in</h5>
+          </div>
+
+          <div class="card-block">
+            <div class="form-group">
+              <label class="control-label pull-left">Email</label>
+              <input id="si-email" type="text" class="form-control" placeholder="Email">
+            </div>
+
+            <div class="form-group">
+              <label class="control-label pull-left">Password</label>
+              <input id="si-password" type="password" class="form-control" placeholder="Password">
+            </div>
+
+            <button id="sign-in" type="button" class="btn btn-success">Log in</button>
+          </div>
+        </div>
+        <br>
+
+        <hr>
+        <label id="agreement-label" class="control-label pull-left">Don't have an account?</label>
+        <button id="create-account-btn" class="btn btn-warning btn-block">Create an Account</button>
+
+        <div id="agreement" class="col-md-9 col-md-offset-1" style="display: none">
+          <p>
+            <small>
+              By clicking "Sign up", you agree to our terms of service and privacy policy.
+              We will send you account related emails occasionally.
+            </small>
+          </p>
+        </div>
+
       </div>
     </div>
 </div>

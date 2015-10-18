@@ -6,12 +6,33 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Noteworthy</title>
   <script src="//www.parsecdn.com/js/parse-1.6.7.min.js"></script>
-  <script src="main.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<nav class="navbar navbar-light navbar-fixed-top bg-faded">
+  <a class="navbar-brand" href="/site/index">Noteworthy</a>
+  <ul class="nav navbar-nav">
+    <li class="nav-item active">
+      <a class="nav-link" href="/site/index">Home <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Features</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">About</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/site/login">Login/Sign up</a>
+    </li>
+  </ul>
+  <form class="form-inline navbar-form pull-right">
+    <input class="form-control" type="text" placeholder="Search">
+    <button class="btn btn-success-outline" type="submit">Search</button>
+  </form>
+</nav>
 <div class="container">
   <%= yield %>
 </div>
