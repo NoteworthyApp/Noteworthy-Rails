@@ -1,0 +1,181 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'grunt-cli' ]
+2 info using npm@2.14.7
+3 info using node@v4.2.1
+4 verbose install initial load of /usr/local/lib/package.json
+5 verbose readDependencies loading dependencies from /usr/local/lib/package.json
+6 silly cache add args [ 'grunt-cli', null ]
+7 verbose cache add spec grunt-cli
+8 silly cache add parsed spec Result {
+8 silly cache add   raw: 'grunt-cli',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'grunt-cli',
+8 silly cache add   rawSpec: '',
+8 silly cache add   spec: '*',
+8 silly cache add   type: 'range' }
+9 silly addNamed grunt-cli@*
+10 verbose addNamed "*" is a valid semver range for grunt-cli
+11 silly addNameRange { name: 'grunt-cli', range: '*', hasData: false }
+12 silly mapToRegistry name grunt-cli
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry uri https://registry.npmjs.org/grunt-cli
+16 verbose addNameRange registry:https://registry.npmjs.org/grunt-cli not in flight; fetching
+17 verbose request uri https://registry.npmjs.org/grunt-cli
+18 verbose request no auth needed
+19 info attempt registry request try #1 at 2:24:32 PM
+20 verbose request id 667e067931a098db
+21 http request GET https://registry.npmjs.org/grunt-cli
+22 http 200 https://registry.npmjs.org/grunt-cli
+23 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+23 verbose headers   etag: '"4QNJZAFFQ7F7ZWE5V79J17VNT"',
+23 verbose headers   'content-type': 'application/json',
+23 verbose headers   'cache-control': 'max-age=60',
+23 verbose headers   'content-length': '21659',
+23 verbose headers   'accept-ranges': 'bytes',
+23 verbose headers   date: 'Sat, 17 Oct 2015 18:24:32 GMT',
+23 verbose headers   via: '1.1 varnish',
+23 verbose headers   age: '60',
+23 verbose headers   connection: 'keep-alive',
+23 verbose headers   'x-served-by': 'cache-jfk1027-JFK',
+23 verbose headers   'x-cache': 'HIT',
+23 verbose headers   'x-cache-hits': '2',
+23 verbose headers   'x-timer': 'S1445106272.994699,VS0,VE0',
+23 verbose headers   vary: 'Accept' }
+24 silly get cb [ 200,
+24 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+24 silly get     etag: '"4QNJZAFFQ7F7ZWE5V79J17VNT"',
+24 silly get     'content-type': 'application/json',
+24 silly get     'cache-control': 'max-age=60',
+24 silly get     'content-length': '21659',
+24 silly get     'accept-ranges': 'bytes',
+24 silly get     date: 'Sat, 17 Oct 2015 18:24:32 GMT',
+24 silly get     via: '1.1 varnish',
+24 silly get     age: '60',
+24 silly get     connection: 'keep-alive',
+24 silly get     'x-served-by': 'cache-jfk1027-JFK',
+24 silly get     'x-cache': 'HIT',
+24 silly get     'x-cache-hits': '2',
+24 silly get     'x-timer': 'S1445106272.994699,VS0,VE0',
+24 silly get     vary: 'Accept' } ]
+25 verbose get saving grunt-cli to /Users/israel/.npm/registry.npmjs.org/grunt-cli/.cache.json
+26 verbose makeDirectory /Users/israel/.npm creation not in flight; initializing
+27 silly makeDirectory /Users/israel/.npm uid: 501 gid: 20
+28 silly addNameRange number 2 { name: 'grunt-cli', range: '*', hasData: true }
+29 silly addNameRange versions [ 'grunt-cli',
+29 silly addNameRange   [ '0.1.0',
+29 silly addNameRange     '0.1.1',
+29 silly addNameRange     '0.1.2',
+29 silly addNameRange     '0.1.3',
+29 silly addNameRange     '0.1.4',
+29 silly addNameRange     '0.1.5',
+29 silly addNameRange     '0.1.6',
+29 silly addNameRange     '0.1.7',
+29 silly addNameRange     '0.1.8',
+29 silly addNameRange     '0.1.9',
+29 silly addNameRange     '0.1.10',
+29 silly addNameRange     '0.1.11',
+29 silly addNameRange     '0.1.12',
+29 silly addNameRange     '0.1.13' ] ]
+30 silly addNamed grunt-cli@0.1.13
+31 verbose addNamed "0.1.13" is a plain semver version for grunt-cli
+32 silly mapToRegistry name grunt-cli
+33 silly mapToRegistry using default registry
+34 silly mapToRegistry registry https://registry.npmjs.org/
+35 silly mapToRegistry uri https://registry.npmjs.org/grunt-cli
+36 verbose addRemoteTarball https://registry.npmjs.org/grunt-cli/-/grunt-cli-0.1.13.tgz not in flight; adding
+37 verbose addRemoteTarball [ 'https://registry.npmjs.org/grunt-cli/-/grunt-cli-0.1.13.tgz',
+37 verbose addRemoteTarball   'e9ebc4047631f5012d922770c39378133cad10f4' ]
+38 info retry fetch attempt 1 at 2:24:33 PM
+39 info attempt registry request try #1 at 2:24:33 PM
+40 http fetch GET https://registry.npmjs.org/grunt-cli/-/grunt-cli-0.1.13.tgz
+41 http fetch 200 https://registry.npmjs.org/grunt-cli/-/grunt-cli-0.1.13.tgz
+42 silly fetchAndShaCheck shasum e9ebc4047631f5012d922770c39378133cad10f4
+43 verbose addTmpTarball /var/folders/w3/94sbl4wj5rs1gwp2d8fljrdr0000gn/T/npm-46737-7213809d/registry.npmjs.org/grunt-cli/-/grunt-cli-0.1.13.tgz not in flight; adding
+44 verbose addTmpTarball already have metadata; skipping unpack for grunt-cli@0.1.13
+45 silly cache afterAdd grunt-cli@0.1.13
+46 verbose afterAdd /Users/israel/.npm/grunt-cli/0.1.13/package/package.json not in flight; writing
+47 verbose afterAdd /Users/israel/.npm/grunt-cli/0.1.13/package/package.json written
+48 silly install resolved [ { name: 'grunt-cli',
+48 silly install resolved     description: 'The grunt command line interface.',
+48 silly install resolved     version: '0.1.13',
+48 silly install resolved     author: { name: 'Grunt Team' },
+48 silly install resolved     homepage: 'http://gruntjs.com/',
+48 silly install resolved     repository: { type: 'git', url: 'git://github.com/gruntjs/grunt-cli.git' },
+48 silly install resolved     bugs: { url: 'http://github.com/gruntjs/grunt-cli/issues' },
+48 silly install resolved     licenses: [ [Object] ],
+48 silly install resolved     bin: { grunt: 'bin/grunt' },
+48 silly install resolved     engines: { node: '>= 0.8.0' },
+48 silly install resolved     scripts: { test: 'node bin/grunt test' },
+48 silly install resolved     preferGlobal: true,
+48 silly install resolved     dependencies: { nopt: '~1.0.10', 'findup-sync': '~0.1.0', resolve: '~0.3.1' },
+48 silly install resolved     devDependencies: { grunt: '~0.4.0', 'grunt-contrib-jshint': '~0.2.0' },
+48 silly install resolved     contributors: [ [Object], [Object], [Object], [Object] ],
+48 silly install resolved     _id: 'grunt-cli@0.1.13',
+48 silly install resolved     dist:
+48 silly install resolved      { shasum: 'e9ebc4047631f5012d922770c39378133cad10f4',
+48 silly install resolved        tarball: 'http://registry.npmjs.org/grunt-cli/-/grunt-cli-0.1.13.tgz' },
+48 silly install resolved     _from: 'grunt-cli@*',
+48 silly install resolved     _npmVersion: '1.3.24',
+48 silly install resolved     _npmUser: { name: 'tkellen', email: 'tyler@sleekcode.net' },
+48 silly install resolved     maintainers: [ [Object] ],
+48 silly install resolved     directories: {},
+48 silly install resolved     _shasum: 'e9ebc4047631f5012d922770c39378133cad10f4',
+48 silly install resolved     _resolved: 'https://registry.npmjs.org/grunt-cli/-/grunt-cli-0.1.13.tgz' } ]
+49 info install grunt-cli@0.1.13 into /usr/local/lib
+50 info installOne grunt-cli@0.1.13
+51 verbose installOne of grunt-cli to /usr/local/lib not in flight; installing
+52 verbose makeDirectory /Users/israel/.npm/_locks creation not in flight; initializing
+53 silly makeDirectory /Users/israel/.npm/_locks uid: 501 gid: 20
+54 verbose lock using /Users/israel/.npm/_locks/grunt-cli-58f484dab06f0a30.lock for /usr/local/lib/node_modules/grunt-cli
+55 silly install write writing grunt-cli 0.1.13 to /usr/local/lib/node_modules/grunt-cli
+56 verbose unbuild lib/node_modules/grunt-cli
+57 silly gentlyRm /usr/local/lib/node_modules/grunt-cli is being purged from base /usr/local
+58 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/grunt-cli
+59 verbose tar unpack /Users/israel/.npm/grunt-cli/0.1.13/package.tgz
+60 verbose tar unpacking to /usr/local/lib/node_modules/grunt-cli
+61 silly gentlyRm /usr/local/lib/node_modules/grunt-cli is being purged
+62 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/grunt-cli
+63 silly gunzTarPerm modes [ '755', '644' ]
+64 error tar.unpack untar error /Users/israel/.npm/grunt-cli/0.1.13/package.tgz
+65 verbose unlock done using /Users/israel/.npm/_locks/grunt-cli-58f484dab06f0a30.lock for /usr/local/lib/node_modules/grunt-cli
+66 verbose fstream_path /usr/local/lib/node_modules/grunt-cli
+67 verbose fstream_type Directory
+68 verbose fstream_class DirWriter
+69 verbose stack Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/grunt-cli'
+69 verbose stack     at Error (native)
+70 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25
+70 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53
+70 verbose fstream_stack FSReqWrap.oncomplete (fs.js:82:15)
+71 verbose cwd /Users/israel/RubymineProjects/noteworthy_rails
+72 error Darwin 15.0.0
+73 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "-g" "grunt-cli"
+74 error node v4.2.1
+75 error npm  v2.14.7
+76 error path /usr/local/lib/node_modules/grunt-cli
+77 error code EACCES
+78 error errno -13
+79 error syscall mkdir
+80 error Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/grunt-cli'
+80 error     at Error (native)
+80 error  { [Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/grunt-cli']
+80 error   errno: -13,
+80 error   code: 'EACCES',
+80 error   syscall: 'mkdir',
+80 error   path: '/usr/local/lib/node_modules/grunt-cli',
+80 error   fstream_type: 'Directory',
+80 error   fstream_path: '/usr/local/lib/node_modules/grunt-cli',
+80 error   fstream_class: 'DirWriter',
+80 error   fstream_stack:
+80 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25',
+80 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53',
+80 error      'FSReqWrap.oncomplete (fs.js:82:15)' ] }
+81 error Please try running this command again as root/Administrator.
+82 verbose exit [ -13, true ]
+83 verbose unbuild lib/node_modules/grunt-cli
+84 silly gentlyRm /usr/local/lib/node_modules/grunt-cli is being purged from base /usr/local
+85 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/grunt-cli
