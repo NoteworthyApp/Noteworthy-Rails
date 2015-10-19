@@ -7,6 +7,7 @@ var signInButton = $('#si-btn');
 signInButton.click(function() {
     console.log("clicked log in");
     login();
+    DataService.login('Michael');
 });
 
 createAccountButton.click(function() {
@@ -45,10 +46,10 @@ function login() {
 
     Parse.User.logIn(username, password, {
         success: function() {
-            alert("Login successful");
+            console.log("Login successful");
         },
         error: function() {
-            alert("Login failed")
+            console.log("Login failed")
         }
     });
 

@@ -4,4 +4,8 @@ class SiteController < ApplicationController
 
   def login
   end
+
+  def test
+    @user_name = params[:name]
+  end
 end

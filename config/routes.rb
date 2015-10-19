@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   get 'site/index'
   get 'site/login'
 
+  match 'site/test' => 'site#test', :via => :get
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
