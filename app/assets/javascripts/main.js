@@ -1,4 +1,4 @@
-Parse.initialize("xaWquA962LKda5zgxedPcBxVMwmtwv0tMwWAvLs4", "rEq8Fx7X2melypPqC47pvw4AVNDNJ142tk4Df2j2");
+Parse.initialize("uGqVPX8ZdhRsRzYK4pRGNvzjwi2bljbNEJtvifHc", "86Q1tN3pxwdVd0RLjiFVFhbnzsLVwXuBHl20l2yg");
 
 var signUpButton = $('#signUp');
 var createAccountButton = $('#create-account-btn');
