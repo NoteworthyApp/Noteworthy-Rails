@@ -7,7 +7,7 @@ var signInButton = $('#si-btn');
 signInButton.click(function() {
     console.log("clicked log in");
     login();
-    DataService.login('Michael');
+    //DataService.login('Michael');
 });
 
 createAccountButton.click(function() {

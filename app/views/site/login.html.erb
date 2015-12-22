@@ -52,7 +52,7 @@
               <input id="si-password" type="password" class="form-control" placeholder="Password">
             </div>
 
-            <button id="si-btn" type="button" class="btn btn-success">Log in</button>
+            <%= button_to "New Log In", {action: "test"}, params: {user: "Israel Test"}, method: :get, class: "btn btn-success", id: "si-btn"%>
           </div>
         </div>
         <br>

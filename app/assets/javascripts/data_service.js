@@ -9,7 +9,7 @@ var DataService = (function() {
             type: 'GET',
             data: {name: userName}
         });
-        //window.location.href = '/site/test';
+        // window.location.href = '/site/test';
     }
 
 

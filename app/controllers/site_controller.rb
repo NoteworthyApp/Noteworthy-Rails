@@ -6,6 +6,6 @@ class SiteController < ApplicationController
   end
 
   def test
-    @user_name = params[:name]
+    @user_name = params[:user]
   end
 end
