@@ -1,21 +1,39 @@
-Parse.initialize("uGqVPX8ZdhRsRzYK4pRGNvzjwi2bljbNEJtvifHc", "86Q1tN3pxwdVd0RLjiFVFhbnzsLVwXuBHl20l2yg");
+//Parse.initialize("uGqVPX8ZdhRsRzYK4pRGNvzjwi2bljbNEJtvifHc", "86Q1tN3pxwdVd0RLjiFVFhbnzsLVwXuBHl20l2yg");
 
 var DataService = (function() {
 
-    function userLogin(name) {
-        var userName = name;
+    function userLogin(username, password) {
         $.ajax({
             url: '/site/test',
             type: 'GET',
-            data: {name: userName}
+            data: {username: username, password: password},
+            success: function(data) {
+                console.log("Login was successful. REST API is working!!");
+                console.log(data);
+            }
         });
-        // window.location.href = '/site/test';
+    }
+
+    function signUp(username, password, email) {
+        $.ajax({
+            url: '/site/sign_up',
+            type: 'POST',
+            data: {username: username, password: password, email: email},
+            success: function(data) {
+                console.log("sign up successful!");
+                console.log(data);
+            }
+        });
     }
 
 
     return {
-        login: function(name) {
-            userLogin(name);
+        login: function(username, password) {
+            userLogin(username, password);
+        },
+        signUp: function(username, password, email) {
+            signUp(username, password, email);
         }
     };
+
 })();
