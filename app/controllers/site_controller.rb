@@ -11,6 +11,8 @@ class SiteController < ApplicationController
     user_name = params[:username]
     password = params[:password]
     ParseUser.authenticate user_name, password
+    locals = {:username => user_name}
+    render 'site/test', :locals => locals
   end
 
   def sign_up

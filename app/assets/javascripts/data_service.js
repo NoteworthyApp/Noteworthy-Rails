@@ -1,10 +1,8 @@
-//Parse.initialize("uGqVPX8ZdhRsRzYK4pRGNvzjwi2bljbNEJtvifHc", "86Q1tN3pxwdVd0RLjiFVFhbnzsLVwXuBHl20l2yg");
-
 var DataService = (function() {
 
     function userLogin(username, password) {
         $.ajax({
-            url: '/site/test',
+            url: '/site/login',
             type: 'GET',
             data: {username: username, password: password},
             success: function(data) {

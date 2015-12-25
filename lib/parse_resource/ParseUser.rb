@@ -6,12 +6,11 @@ class ParseUser
   def self.authenticate(username, password)
     base_uri = 'https://api.parse.com/1/login'
 
-    resource = RestClient::Resource.new(base_uri, $keys['app_id'], $keys['api_key'])
+    resource = RestClient::Resource.new(base_uri, 'uGqVPX8ZdhRsRzYK4pRGNvzjwi2bljbNEJtvifHc', 'F7hGGcckJ6CMSElVA799PQxnR6cmNen65WskyYjv')
 
-    response = resource.get(:params => {:username => username, :password => password})
-    user = JSON.parse response
+    parse_response = resource.get(:params => {:username => username, :password => password})
 
-    return user
+    return parse_response
   end
 
   def self.sign_up(username, password, email)
@@ -23,5 +22,6 @@ class ParseUser
     )
 
     json_response = JSON.parse response
+    return json_response
   end
 end
