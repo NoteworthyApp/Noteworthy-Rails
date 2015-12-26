@@ -7,7 +7,7 @@ class SiteController < ApplicationController
   def login
   end
 
-  def test
+  def user_login
     user_name = params[:username]
     password = params[:password]
     ParseUser.authenticate user_name, password

@@ -2,7 +2,7 @@ var DataService = (function() {
 
     function userLogin(username, password) {
         $.ajax({
-            url: '/site/login',
+            url: '/site/user_login',
             type: 'GET',
             data: {username: username, password: password},
             success: function(data) {
