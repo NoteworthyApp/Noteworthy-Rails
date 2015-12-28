@@ -3,16 +3,24 @@ require 'json'
 class ParseUser
   $keys = {:app_id => 'uGqVPX8ZdhRsRzYK4pRGNvzjwi2bljbNEJtvifHc', :api_key => 'YlWreRr1vBWHwsahl8miqJmV7vq11rbMLwitI2N5'}
 
+  # user login API call
   def self.authenticate(username, password)
     base_uri = 'https://api.parse.com/1/login'
 
     resource = RestClient::Resource.new(base_uri, 'uGqVPX8ZdhRsRzYK4pRGNvzjwi2bljbNEJtvifHc', 'F7hGGcckJ6CMSElVA799PQxnR6cmNen65WskyYjv')
 
-    parse_response = resource.get(:params => {:username => username, :password => password})
+    begin
+      server_response = resource.get(:params => {:username => username, :password => password})
+      server_response_json = JSON.parse server_response
 
-    return parse_response
+      server_response_json
+    rescue
+      false
+    end
+
   end
 
+  # user sign up API call
   def self.sign_up(username, password, email)
     base_uri = 'https://api.parse.com/1/users'
 

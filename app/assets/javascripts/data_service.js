@@ -14,7 +14,7 @@ var DataService = (function() {
 
     function signUp(username, password, email) {
         $.ajax({
-            url: '/site/sign_up',
+            url: '/site/sign_in_test',
             type: 'POST',
             data: {username: username, password: password, email: email},
             success: function(data) {

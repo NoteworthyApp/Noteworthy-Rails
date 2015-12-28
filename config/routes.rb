@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   get 'site/user_login'
 
-  post 'site/sign_up'
+  get 'site/sign_in_test'
+
+  post 'site/sign_in'
 
 end
