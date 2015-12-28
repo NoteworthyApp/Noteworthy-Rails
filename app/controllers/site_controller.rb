@@ -12,6 +12,19 @@ class SiteController < ApplicationController
   def sign_in_test
   end
 
+  def create_account
+  end
+
+  def create
+    username = params['username']
+    password = params['password']
+    email = params['email']
+
+    user = ParseUser.sign_up username, password, email
+    locals = {:username => username}
+    render 'site/test', :locals => locals
+  end
+
   def sign_in
     username = params['username']
     password = params['password']

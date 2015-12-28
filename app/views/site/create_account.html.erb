@@ -1,0 +1,35 @@
+<br><br>
+<div class="col-md-6 col-md-offset-3">
+    <div id="sign-up-card" class="card">
+      <div class="card-header">
+        <h5>Create an Account</h5>
+      </div>
+
+      <div class="card-block">
+
+        <form action="/site/create" method="post">
+
+          <fieldset class="form-group">
+            <label class="control-label pull-left">Username</label>
+            <input name="username" type="text" class="form-control" placeholder="Username">
+          </fieldset>
+
+
+          <fieldset class="form-group">
+            <label class="control-label pull-left">Email</label>
+            <input name="email" type="text" class="form-control" placeholder="Email">
+          </fieldset>
+
+          <fieldset class="form-group">
+            <label class="control-label pull-left">Password</label>
+            <input name="password" type="password" class="form-control" placeholder="Password">
+          </fieldset>
+          <br>
+          <input type="submit" class="btn btn-primary center-block" value="Sign up!">
+        </form>
+      </div>
+    </div>
+    <p class="text-center">
+      Already have an account? <a href="/site/sign_in_test">Click here to sign in.</a>
+    </p>
+</div>
