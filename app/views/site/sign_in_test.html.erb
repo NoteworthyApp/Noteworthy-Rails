@@ -1,15 +1,27 @@
-<h1>Sign in</h1>
-
+<br>
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <form action="/site/sign_in" method="post">
-      Username:<br>
-      <input type="text" name="username">
-      <br>
-      Password:<br>
-      <input type="password" name="password">
-      <br>
-      <input type="submit" class="btn btn-success center-block" value="Sign In">
-    </form>
+    <div id="sign-in-card" class="card">
+      <div class="card-header card-primary">
+        <h5 style="color: white">Sign In</h5>
+      </div>
+
+      <div class="card-block">
+        <form action="/site/sign_in" method="post">
+          Username:<br>
+          <fieldset class="form-group">
+            <input type="text" name="username" class="form-control" placeholder="username">
+          </fieldset>
+          <br>
+          Password:<br>
+          <fieldset class="form-group">
+            <input type="password" name="password" class="form-control" placeholder="password">
+          </fieldset>
+          <br>
+          <input type="submit" class="btn btn-success center-block" value="Sign In">
+        </form>
+      </div>
+    </div>
   </div>
 </div>
+
