@@ -1,8 +1,6 @@
 require 'rest-client'
 require 'json'
 class ParseUser
-  $keys = {:app_id => 'uGqVPX8ZdhRsRzYK4pRGNvzjwi2bljbNEJtvifHc', :api_key => 'YlWreRr1vBWHwsahl8miqJmV7vq11rbMLwitI2N5'}
-
   # user login API call
   def self.authenticate(username, password)
     base_uri = 'https://api.parse.com/1/login'
