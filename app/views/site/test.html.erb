@@ -1,4 +1,14 @@
 <div class="contatiner bootstrap-welcome">
   <h1>HELLO WORLD</h1>
   <h1>Hello, <%= username %></h1>
+    <br><br><br>
+  <% if courses.empty? %>
+      <div class="alert alert-warning">
+        <strong>No Courses</strong>
+      </div>
+  <% else %>
+    <% courses.each do |course| %>
+        <h3><%=course['Name']%></h3>
+    <% end %>
+  <% end %>
 </div>

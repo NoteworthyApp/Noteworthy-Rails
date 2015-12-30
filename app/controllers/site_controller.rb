@@ -29,10 +29,12 @@ class SiteController < ApplicationController
     username = params['username']
     password = params['password']
     user = ParseUser.authenticate username, password
+    courses = user['courses']
 
     if user
-      locals = {:username => username}
+      locals = {:username => username, :courses => courses}
       render 'site/test', :locals => locals
+      # render json: courses
     else
       render 'site/sign_in_test'
     end
