@@ -13,21 +13,6 @@
   <!--<% end %>-->
 <!--</div>-->
 
-<!--<head>-->
-  <!--&lt;!&ndash; Custom CSS &ndash;&gt;-->
-  <!--<link href="assets/stylesheets/simple-sidebar.css" rel="stylesheet">-->
-
-  <!--&lt;!&ndash; HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries &ndash;&gt;-->
-  <!--&lt;!&ndash; WARNING: Respond.js doesn't work if you view the page via file:// &ndash;&gt;-->
-  <!--&lt;!&ndash;[if lt IE 9]>-->
-  <!--<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>-->
-  <!--<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>-->
-  <!--<![endif]&ndash;&gt;-->
-
-<!--</head>-->
-
-<!--<body>-->
-
 <div id="wrapper">
 
   <!-- Sidebar -->
@@ -35,30 +20,20 @@
     <ul class="sidebar-nav">
       <li class="sidebar-brand">
         <a href="#">
-          Start Bootstrap
+          Courses
         </a>
       </li>
-      <li>
-        <a href="#">Dashboard</a>
-      </li>
-      <li>
-        <a href="#">Shortcuts</a>
-      </li>
-      <li>
-        <a href="#">Overview</a>
-      </li>
-      <li>
-        <a href="#">Events</a>
-      </li>
-      <li>
-        <a href="#">About</a>
-      </li>
-      <li>
-        <a href="#">Services</a>
-      </li>
-      <li>
-        <a href="#">Contact</a>
-      </li>
+      <% if courses.empty? %>
+          <div class="alert alert-warning">
+          <strong>No Courses</strong>
+          </div>
+          <% else %>
+          <% courses.each do |course| %>
+              <li>
+                <a href="#"><%=course['Name']%></a>
+              </li>
+          <% end %>
+      <% end %>
     </ul>
   </div>
   <!-- /#sidebar-wrapper -->
@@ -79,13 +54,7 @@
   <!-- /#page-content-wrapper -->
 
 </div>
-<!-- /#wrapper -->
 
-<!-- jQuery -->
-<script src="js/jquery.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
 
 <!-- Menu Toggle Script -->
 <script>
@@ -94,5 +63,3 @@
         $("#wrapper").toggleClass("toggled");
     });
 </script>
-
-<!--</body>-->
