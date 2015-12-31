@@ -21,8 +21,12 @@ class SiteController < ApplicationController
     email = params['email']
 
     user = ParseUser.sign_up username, password, email
-    locals = {:username => username}
-    render 'site/test', :locals => locals
+
+    if user
+      courses = Array.new
+      locals = {:username => username, :courses => courses}
+      render 'site/test', :locals => locals
+    end
   end
 
   def sign_in

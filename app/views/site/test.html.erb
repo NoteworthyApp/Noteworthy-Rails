@@ -4,20 +4,9 @@
     <ul class="sidebar-nav">
       <li class="sidebar-brand">
         <a href="#">
-          Courses
+          Add Courses
         </a>
       </li>
-      <% if courses.empty? %>
-          <div class="alert alert-warning">
-          <strong>No Courses</strong>
-          </div>
-          <% else %>
-          <% courses.each do |course| %>
-              <li>
-                <a href="#"><%=course['Name']%></a>
-              </li>
-          <% end %>
-      <% end %>
     </ul>
   </div>
   <!-- /#sidebar-wrapper -->
@@ -28,33 +17,34 @@
       <div class="row">
         <div class="col-lg-12">
           <h1>Hello, <%= username %></h1>
+
           <p>Welcome to NoteWorthy!</p>
           <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
         </div>
       </div>
     </div>
 
-
-    <div id="pin-wrapper">
-      <div id="columns">
-        <% if courses.empty? %>
-            <div class="alert alert-warning">
-              <strong>No Courses</strong>
-            </div>
-        <% else %>
+    <% if courses.nil? or courses.empty? %>
+        <div class="alert alert-warning text-center">
+          <strong>No Courses</strong>
+        </div>
+    <% else %>
+        <div id="pin-wrapper">
+          <div id="columns">
             <% courses.each do |course| %>
                 <div class="pin">
-                  <h2><%=course['Name']%></h2>
+                  <h2><%= course['Name'] %></h2>
+
                   <p>
-                  <strong>Professor:</strong> <%= course['Professor']%>
-                  <strong>Description:</strong>
-                  <%= course['description'] %>
+                    <strong>Professor:</strong> <%= course['Professor'] %>
+                    <strong>Description:</strong>
+                    <%= course['description'] %>
                   </p>
                 </div>
             <% end %>
-        <% end %>
-      </div>
-    </div>
+          </div>
+        </div>
+    <% end %>
 
   </div>
   <!-- /#page-content-wrapper -->
@@ -64,7 +54,7 @@
 
 <!-- Menu Toggle Script -->
 <script>
-    $("#menu-toggle").click(function(e) {
+    $("#menu-toggle").click(function (e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
     });
