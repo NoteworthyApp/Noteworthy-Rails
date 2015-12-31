@@ -4,18 +4,16 @@ class NoteworthyController < ApplicationController
   skip_before_filter  :verify_authenticity_token
 
   def index
-    render 'layouts/index'
+    render :layout => false
   end
 
   def login
   end
 
   def sign_in_test
-    render 'layouts/sign_in_test'
   end
 
   def create_account
-    render 'layouts/create_account'
   end
 
   def create
@@ -28,7 +26,7 @@ class NoteworthyController < ApplicationController
     if user
       courses = Array.new
       locals = {:username => username, :courses => courses}
-      render 'layouts/test', :locals => locals
+      render 'noteworthy/test', :locals => locals
     end
   end
 
@@ -40,10 +38,10 @@ class NoteworthyController < ApplicationController
 
     if user
       locals = {:username => username, :courses => courses}
-      render 'layouts/test', :locals => locals
+      render 'noteworthy/test', :locals => locals
       # render json: courses
     else
-      render 'layouts/sign_in_test'
+      render 'noteworthy/sign_in_test'
     end
   end
 end
