@@ -1,16 +1,19 @@
 Rails.application.routes.draw do
-  get 'site/index'
 
-  get 'site/login'
+  root to: 'noteworthy#index'
 
-  get 'site/user_login'
+  get '/index', to: 'noteworthy#index'
 
-  get 'site/sign_in_test'
+  get '/login', to: 'noteworthy#login'
 
-  get 'site/create_account'
+  get '/user_login', to: 'noteworthy#user_login'
 
-  post 'site/sign_in'
+  get '/sign_in_test', to: 'noteworthy#sign_in_test'
 
-  post 'site/create'
+  get '/create_account', to: 'noteworthy#create_account'
+
+  post '/sign_in', to: 'noteworthy#sign_in'
+
+  post 'site/create', to: 'noteworthy#create'
 
 end
