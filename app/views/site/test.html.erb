@@ -35,68 +35,26 @@
     </div>
 
 
-
-
     <div id="pin-wrapper">
       <div id="columns">
-        <div class="pin">
-          <h2>EECS 325</h2>
-          <p>
-            Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Sed feugiat consectetur pellentesque. Nam ac elit risus,
-            ac blandit dui. Duis rutrum porta tortor ut convallis.
-            Duis rutrum porta tortor ut convallis.
-          </p>
-        </div>
-
-        <div class="pin">
-          <img src="http://cssdeck.com/uploads/media/items/1/1swi3Qy.png" />
-          <p>
-            Donec a fermentum nisi.
-          </p>
-        </div>
-
-        <div class="pin">
-          <img src="http://cssdeck.com/uploads/media/items/6/6f3nXse.png" />
-          <p>
-            Nullam eget lectus augue. Donec eu sem sit amet ligula
-            faucibus suscipit. Suspendisse rutrum turpis quis nunc
-            convallis quis aliquam mauris suscipit.
-          </p>
-        </div>
-
-        <div class="pin">
-          <img src="http://cssdeck.com/uploads/media/items/8/8kEc1hS.png" />
-          <p>
-            Nullam eget lectus augue. Donec eu sem sit amet ligula
-            faucibus suscipit. Suspendisse rutrum turpis quis nunc
-            convallis quis aliquam mauris suscipit.
-          </p>
-        </div>
-
-        <div class="pin">
-          <img src="http://cssdeck.com/uploads/media/items/1/1swi3Qy.png" />
-          <p>
-            Donec a fermentum nisi. Integer dolor est, commodo ut
-            sagittis vitae, egestas at augue.
-          </p>
-        </div>
-
-        <div class="pin">
-          <img src="http://cssdeck.com/uploads/media/items/6/6f3nXse.png" />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Sed feugiat consectetur pellentesque. Nam ac elit risus,
-            ac blandit dui. Duis rutrum porta tortor ut convallis.
-            Duis rutrum porta tortor ut convallis.
-          </p>
-        </div>
-
+        <% if courses.empty? %>
+            <div class="alert alert-warning">
+              <strong>No Courses</strong>
+            </div>
+        <% else %>
+            <% courses.each do |course| %>
+                <div class="pin">
+                  <h2><%=course['Name']%></h2>
+                  <p>
+                  <strong>Professor:</strong> <%= course['Professor']%>
+                  <strong>Description:</strong>
+                  <%= course['description'] %>
+                  </p>
+                </div>
+            <% end %>
+        <% end %>
       </div>
     </div>
-
-
-
 
   </div>
   <!-- /#page-content-wrapper -->
