@@ -13,64 +13,96 @@
       <%= csrf_meta_tags %>
     </head>
     <body>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 text-center bootstrap-welcome">
-              <h1 style="font-size: 4em">Noteworthy</h1>
+        <div class="sign-up-container">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 pull-left center-block vcenter">
+                <h1 style="color: white">Noteworthy</h1>
+                <p style="color: white">
+                  A noteworthy knowledge base!
+                </p>
+              </div>
+              <div class="col-lg-4 pull-right">
+                <br>
+                <p style="color: white">
+                  <strong>New to Noteworthy?</strong> Join today!
+                </p>
+                <form action="/create" method="post">
 
-              <p class="lead">
-                A simple yet powerful note sharing ecosystem!
-              </p>
-            </div>
+                  <fieldset class="form-group">
+                    <input name="username" type="text" class="form-control" placeholder="Username">
+                    <br>
+                    <input name="email" type="text" class="form-control" placeholder="Email">
+                    <br>
+                    <input name="password" type="password" class="form-control" placeholder="Password">
 
-            <hr>
-
-            <div class="col-md-4">
-              <div class="card">
-                <img class="card-img-top" src="/assets/img1.jpeg" style="max-width: 100%; max-height: 100%">
-
-                <div class="card-block">
-                  <h4 class="card-title">Completely Free</h4>
-
-                  <p class="card-text">
-                    Noteworthy is a free platform desgined with the user in mind.
-                    Just upload your notes and right away, you gain access to thousands of other students' notes.
-                  </p>
-                </div>
+                    <br>
+                    <input type="submit" class="btn btn-primary pull-right" value="Sign up!">
+                  </fieldset>
+                </form>
+                <br>
               </div>
             </div>
-
-            <div class="col-md-4">
-              <div class="card">
-                <img class="card-img-top" src="/assets/img3.jpeg" style="max-width: 100%; max-height: 100%">
-
-                <div class="card-block">
-                  <h4 class="card-title">Improves Education</h4>
-
-                  <p class="card-text">
-                    Today we live in a globally connected society where we are always communicating and sharind data with each
-                    other. Education should work no different!
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card">
-                <img class="card-img-top" src="/assets/img2.jpeg" style="max-width: 100%; max-height: 100%">
-
-                <div class="card-block">
-                  <h4 class="card-title">Earn the Grades you Want</h4>
-
-                  <p class="card-text">
-                    Research shows that groups perform better than individuals.
-                    By collaborating and communicating with your peers, you will learn more and reap the rewards.
-                  </p>
-                </div>
-              </div>
-            </div>
-
           </div>
+        </div>
+        <div class="bottom-half">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 text-center">
+                <br>
+                <h1>A simple yet powerful note sharing ecosystem!</h1>
+                <br>
+              </div>
+
+              <hr>
+
+              <div class="col-md-4">
+                <div class="card" style="background-color: white">
+                  <img class="card-img-top" src="/assets/img1.jpeg" style="max-width: 100%; max-height: 100%">
+
+                  <div class="card-block">
+                    <h4 class="card-title">Completely Free</h4>
+
+                    <p class="card-text">
+                      Noteworthy is a free platform designed with the user in mind.
+                      Just upload your notes and right away, you gain access to thousands of other students' notes.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card" style="background-color: white">
+                  <img class="card-img-top" src="/assets/img3.jpeg" style="max-width: 100%; max-height: 100%">
+
+                  <div class="card-block">
+                    <h4 class="card-title">Improves Education</h4>
+
+                    <p class="card-text">
+                      Today we live in a globally connected society where we are always communicating and sharing data with each
+                      other. Education should work no different!
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card" style="background-color: white">
+                  <img class="card-img-top" src="/assets/img2.jpeg" style="max-width: 100%; max-height: 100%">
+
+                  <div class="card-block">
+                    <h4 class="card-title">Earn the Grades you Want</h4>
+
+                    <p class="card-text">
+                      Research shows that groups perform better than individuals.
+                      By collaborating and communicating with your peers, you will learn more and reap the rewards.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br><br>
         </div>
     </body>
 </html>

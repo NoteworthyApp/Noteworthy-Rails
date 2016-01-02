@@ -2,6 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.sign-up-container {
+  background-image: url("/dark_background.png");
+}
+
+.bottom-half {
+  //background-image: url("/school.png");
+}
+
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
+
 .bootstrap-welcome {
   padding-top: 5em;
 }
