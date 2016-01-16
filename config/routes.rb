@@ -14,6 +14,6 @@ Rails.application.routes.draw do
 
   post '/sign_in', to: 'noteworthy#sign_in'
 
-  post 'site/create', to: 'noteworthy#create'
+  post '/create', to: 'noteworthy#create'
 
 end

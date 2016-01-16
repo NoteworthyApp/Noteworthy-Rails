@@ -31,10 +31,18 @@ class NoteworthyController < ApplicationController
   end
 
   def sign_in
+    object_ids = Array.new
     username = params['username']
     password = params['password']
     user = ParseUser.authenticate username, password
-    courses = user['courses']
+    course_objects = user['courses']
+
+    course_objects.each do |obj|
+      object_ids << obj['objectId']
+    end
+
+    courses = ParseUser.get_courses object_ids
+    puts courses
 
     if user
       locals = {:username => username, :courses => courses}
