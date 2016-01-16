@@ -49,7 +49,7 @@ class NoteworthyController < ApplicationController
       render 'noteworthy/test', :locals => locals
       # render json: courses
     else
-      render 'noteworthy/sign_in_test'
+      render 'noteworthy/index'
     end
   end
 end
