@@ -27,6 +27,8 @@ gem 'rest-client', '~> 1.8'
 
 gem 'json'
 
+gem 'photoswipe-rails', '~> 4.1'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
