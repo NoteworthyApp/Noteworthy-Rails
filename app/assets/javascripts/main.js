@@ -1,6 +1,7 @@
 
 var Noteworthy = function() {
     var photView = $("#photo-viewer");
+    var notebook = $(".notebook");
     var pswpElement = document.querySelectorAll('.pswp')[0];
 
     photView.click(function() {
@@ -19,6 +20,11 @@ var Noteworthy = function() {
             src: 'https://images.unsplash.com/photo-1451186859696-371d9477be93?crop=entropy&fit=crop&fm=jpg&h=800&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1450',
             w: 1200,
             h: 900
+        },
+        {
+            src: 'http://i.imgur.com/PBNZxH5.png',
+            w: 900,
+            h: 1200
         }
     ];
 
